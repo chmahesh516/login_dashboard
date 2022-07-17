@@ -1,0 +1,19 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-dev" [class.alternative]="isTrue">
+<mat-card fxFlex="25">
+  <mat-toolbar color="primary">Login Page</mat-toolbar>
+  <form [formGroup]="loginForm" novalidate fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+   <mat-form-field>
+      <input matInput placeholder="Username" formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" autocomplete="false" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Login</button>
+    <button mat-raised-button color="accent" type="submit" (click)="onChangeTheme()">Change</button>
+    <div class="col-sm-12" align="right">
+      <small><a routerLink="../forgot-password">Forgot Password</a></small>
+  </div>
+  </form>
+ 
+</mat-card>
+</div>

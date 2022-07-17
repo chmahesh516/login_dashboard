@@ -1,0 +1,34 @@
+
+
+
+
+<div class="login-container">
+    <div class="login-content">
+     <mat-card>
+        <div class="card-body p-5">
+            <div class="alignment-center">
+                <fa-icon [icon]="faLock" class="fa-3x" ></fa-icon>
+            </div>
+            <div class="alignment-center">
+                <h2>Forgot Password</h2>
+            </div>
+            <p style="color: lightslategray;text-align: center">Please enter your registered email where<br> we will send you the reset password link</p>
+            <form [formGroup]="loginForm">
+                <mat-form-field class="mx-2 my-2" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <mat-icon matPrefix >mail</mat-icon>
+                    <input autofocus type="text" matInput placeholder="Username" formControlName="username">
+             </mat-form-field>
+               <button mat-raised-button color="primary" fxLayoutAlign="center center" class="mx-3 radius"
+                 type="submit">Reset Password Link</button>
+                
+            </form>
+        </div>
+        <div class="card-footer text-right" style="font-size: 12;">
+            <small>Ohh I remember <a routerLink="../login">Back to Login</a></small>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+
