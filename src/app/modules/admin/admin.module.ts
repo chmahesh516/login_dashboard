@@ -9,6 +9,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
+import { SidenavComponent } from './components/sidenav/sidenav/sidenav.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -19,11 +26,14 @@ import { ServicesComponent } from './components/services/services.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent
+    ServicesComponent,
+    SidenavComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,SharedModule,FormsModule,FlexLayoutModule
   ]
 })
 export class AdminModule { }

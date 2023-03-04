@@ -8,11 +8,12 @@ import { LoginComponent } from './component/login/login.component';
 import { ForgotPwdComponent } from './component/forgot-pwd/forgot-pwd.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {BidiModule} from '@angular/cdk/bidi';
+import { SharedServiceService } from './modules/admin/components/shared-service.service';
 
 
 @NgModule({
@@ -20,16 +21,16 @@ import {BidiModule} from '@angular/cdk/bidi';
     AppComponent,
     LoginComponent,
     ForgotPwdComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,SharedModule,ReactiveFormsModule,
     FontAwesomeModule,
-    NgbModule,FlexLayoutModule,BidiModule
+    NgbModule,FlexLayoutModule,BidiModule,FormsModule
   ],
-  providers: [],
+  providers: [SharedServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
