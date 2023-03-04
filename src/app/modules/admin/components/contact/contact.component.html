@@ -1,56 +1,109 @@
-<div class="container pt-5 pb-5">
-    <div class="col-12">
-        <div class="d-flex flex-wrap justify-content-between">
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">Content itself is what the user derives value from. Thus, "content" can refer
-                        to the information provided through the medium, the way in which the information was presented,
-                        as well as the added features included in the medium in which that information was delivered.
-                        The medium, however, provides little to no value to the end-user without the information and
-                        experiences that make up the content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">Content itself is what the user derives value from. Thus, "content" can refer
-                        to the information provided through the medium, the way in which the information was presented,
-                        as well as the added features included in the medium in which that information was delivered.
-                        The medium, however, provides little to no value to the end-user without the information and
-                        experiences that make up the content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Contact Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+
+<div fxLayout="column">
+    <mat-card style="padding: 1%;">
+        <mat-card-header>
+            <mat-card-title>Mat Table</mat-card-title>
+        </mat-card-header>
+    <div>
+        <div class="example-container mat-elevation-z8"> 
+            <table mat-table [dataSource]="dataSource">
+    
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef 
+                  > No. </th>
+                  <ng-container>
+                    <td mat-cell *matCellDef="let element; let i = index"
+                  [rowSpan]="getRowSpan('position', i)"
+                   [style.display]="getRowSpan('position', i) ? '' : 'none'"
+                  > {{element.position}} </td>
+                  </ng-container>
+                </ng-container>
+                 <!-- [style.display]="getRowSpan('position', i) ? '' : 'none'" -->
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"
+                  
+                  > {{element.symbol}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="name1">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+                
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight1">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                  </ng-container>
+                
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol1">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"
+                    
+                    > {{element.symbol}} </td>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="name2">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+                
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight2">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                  </ng-container>
+                
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol2">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"
+                    
+                    > {{element.symbol}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="name3">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  </ng-container>
+                
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="weight3">
+                    <th mat-header-cell *matHeaderCellDef> Weight </th>
+                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                  </ng-container>
+                
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="symbol3">
+                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                    <td mat-cell *matCellDef="let element"              
+                    > {{element.symbol}} </td>
+                  </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+          </div>
+       
     </div>
+</mat-card>
 </div>
+
+
+
